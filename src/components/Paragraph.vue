@@ -7,7 +7,10 @@
 export default {
   name: 'Paragraph',
   props: {
-    text: String
+    text: {
+      type: String,
+      default: "This is the default text"
+    },
   }
 }
 </script>
