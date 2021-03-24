@@ -1,10 +1,11 @@
 <template>
   <div>
-    <ul>
+    <ul v-if="people.length > 0">
       <li v-for="person in people" :key="person.index">
         {{ person }}
       </li>
     </ul>
+    <p v-else>Nothing to see here</p>
     <label for="addname">New Name:</label>
     <input type="text" id="addname" name="addname" v-model="newName">
     <button @click="addName">Add name</button>
@@ -16,7 +17,10 @@
 export default {
   name: 'People',
   props: {
-    arrayPeople: Array
+    arrayPeople: {
+      type: Array,
+      default: () => []
+    },
   },
   data: function() {
     return {
