@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="style">
   </div>
 </template>
 
@@ -7,6 +7,17 @@
 
 export default {
   name: 'Square',
+  props: {
+    colour: {
+      type: String,
+      default: "red"
+    },
+  },
+  computed: {
+    style () {
+      return 'background-color: ' + this.colour;
+    }
+  },
 }
 </script>
 
@@ -15,7 +26,6 @@ export default {
   div {
     width: 200px;
     height: 200px;
-    background-color: red;
     margin: auto;
   }
 </style>
