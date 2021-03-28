@@ -2,7 +2,7 @@
   <div>
     <Header heading="This is a test" />
     <Paragraph />
-    <Square />
+    <Square v-if=square />
     <People v-bind:arrayPeople="['Tom', 'Harry', 'John']" />
   </div>
 </template>
@@ -20,6 +20,12 @@ export default {
     Paragraph,
     Square,
     People
+  },
+  props: {
+    square: {
+      type: Boolean,
+      default: true
+    },
   }
 }
 </script>

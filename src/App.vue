@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <HelloWorld v-bind:square=false />
   </div>
 </template>
 
