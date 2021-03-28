@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header heading="This is a test" />
+    <Header heading="This is a test">This goes in the slot</Header>
     <Paragraph />
     <Square v-if=square />
     <People v-bind:arrayPeople="['Tom', 'Harry', 'John']" />
