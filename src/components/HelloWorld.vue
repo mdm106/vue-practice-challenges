@@ -4,6 +4,7 @@
     <Paragraph />
     <Square v-if=square />
     <People v-bind:arrayPeople="['Tom', 'Harry', 'John']" />
+    <Basket />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from './Header.vue'
 import Paragraph from './Paragraph.vue'
 import Square from './Square.vue'
 import People from './People.vue'
+import Basket from './Basket.vue'
 
 export default {
   name: 'HelloWorld',
@@ -19,7 +21,8 @@ export default {
     Header,
     Paragraph,
     Square,
-    People
+    People,
+    Basket
   },
   props: {
     square: {
